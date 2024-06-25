@@ -157,7 +157,7 @@ const StepperComponent = () => {
     const [activeStep, setActiveStep] = useState(2);
 
     return (
-        <Stepper style={{ marginTop: '20px' }} alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
+        <Stepper style={{ marginTop: '20px', width: '100%' }} alternativeLabel activeStep={activeStep} connector={<ColorlibConnector />}>
             {steps.map((label, index) => (
                 <Step key={label}>
                     <StyledStepLabel StepIconComponent={ColorlibStepIcon}>{label}</StyledStepLabel>

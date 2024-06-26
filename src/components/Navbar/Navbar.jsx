@@ -1,5 +1,6 @@
 import React from 'react'
 import "./Navbar.css"
+import MenuNav from '../../MaterialComponent/MenuNav/MenuNav'
 
 const Navbar = () => {
   return (
@@ -9,7 +10,7 @@ const Navbar = () => {
       
       <div className="area-redirecionar-mobile">
         {/* INSTALAR UMA BIBLIOTECA PARA CONFIGURAR O LAYOUT DE REDIRECIONAMENTO */}
-        <p>teste</p>
+        <MenuNav/>
       </div>
 
       <div className="area-redirecionar-desktop">

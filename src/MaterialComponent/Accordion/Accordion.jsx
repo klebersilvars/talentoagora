@@ -1,4 +1,5 @@
 import * as React from 'react';
+import './Accordion.css'
 import Accordion from '@mui/material/Accordion';
 import AccordionSummary from '@mui/material/AccordionSummary';
 import AccordionDetails from '@mui/material/AccordionDetails';
@@ -9,7 +10,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 export default function AccordionExpandIcon() {
     return (
         <div>
-            <Accordion>
+            <Accordion className='accordion-container'>
                 <AccordionSummary
                     style={{ backgroundColor: "#2EA49E" }}
                     expandIcon={<ArrowDownwardIcon />}

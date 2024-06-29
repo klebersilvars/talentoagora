@@ -1,0 +1,144 @@
+.header-container {
+    height: 500px;
+    width: 100%;
+    background-color: #2EA49E;
+    flex-direction: column;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.336);
+}
+
+.home-info {
+    height: 480px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    
+}
+
+.texto-info-vaga {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.texto-info-vaga > h2 {
+    color: white;
+    font-size: 40px;
+    font-weight: normal;
+}
+
+.texto-info-vaga > p {
+    font-size: 17px;
+    text-align: center;
+}
+
+.btn-container-vagas {
+    height: 200px;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.publicar-vaga-button {
+    width: 100%;
+    height: 46px;
+    font-weight: bold;
+    font-size: 17px;
+    border: none;
+    border-radius:6px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.116);
+    cursor: pointer;
+}
+
+.publicar-vaga-button:hover {
+    background-color: #6EDDD6;
+    color: white;
+    transition-duration: 0.5s;
+}
+
+.img-container {
+    display: none;
+}
+
+.img-vaga {
+    display: none;
+}
+
+.paragrafo-empresa {
+    width: 70%;
+    text-align: justify;
+}
+
+@media (min-width: 768px) {
+    .home-info {
+        align-items: center;
+        justify-content: initial;
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .img-container {
+        display: flex;
+        width: 50%;
+        height: 200px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-vaga {
+        display: block;
+        height: auto;
+        width: 100%;
+        filter: drop-shadow(1px 2px 3px rgba(0, 0, 0, 0.384));
+
+        animation: float 2s ease-in-out infinite;
+    }
+
+
+    .texto-info-vaga {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .img-vaga {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1440px) {
+
+    .header-container {
+        height: 600px;
+    }
+
+    .publicar-vaga-button {
+        width: 70%;
+        height: 46px;
+        font-weight: bold;
+        font-size: 17px;
+        border: none;
+        border-radius:6px;
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.116);
+        cursor: pointer;
+    }
+
+    .img-vaga {
+        width: 70%;
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }50% {
+        transform: translateY(-15px);
+    }
+}

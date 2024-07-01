@@ -10,7 +10,7 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 export default function AccordionExpandIcon() {
     return (
         <div>
-            <Accordion className='accordion-container'>
+            <Accordion style={{width: '100%'}} className='accordion-container'>
                 <AccordionSummary
                     style={{ backgroundColor: "#2EA49E" }}
                     expandIcon={<ArrowDownwardIcon />}

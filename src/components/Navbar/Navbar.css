@@ -9,6 +9,12 @@
     padding: 10px;
 }
 
+.link-home-talentoagora {
+    text-decoration: none;
+    color: black;
+}
+
+
 
 .area-redirecionar {
     width: 50%;
@@ -32,6 +38,11 @@
         align-items: center;
         justify-content: center;
         gap: 1em;
+    }
+
+    .link-home-talentoagora {
+        text-decoration: none;
+        color: black;
     }
 
     .btn-vagas {

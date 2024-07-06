@@ -3,6 +3,7 @@ import {BrowserRouter, Route, Routes} from 'react-router-dom'
 import Home from './src/pages/Home/Home'
 import Empresas from './src/pages/Empresas/Empresas'
 import Header from './src/components/Header/Header'
+import PublicarVaga from './src/pages/PublicarVaga/PublicarVaga'
 
 const RoutesApp = () => {
   return (
@@ -12,6 +13,7 @@ const RoutesApp = () => {
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/para-empresas" element={<Empresas/>}/>
+            <Route path="/publicar-vaga" element={<PublicarVaga/>}/>
         </Routes>
 
     </BrowserRouter>

@@ -1,0 +1,21 @@
+.form-container {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-container > h2 {
+    color: #2ea49e;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.inputs-forms {
+    height: 500px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

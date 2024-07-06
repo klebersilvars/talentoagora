@@ -7,19 +7,21 @@ const Soluctions = () => {
   return (
     <>
       <main className='soluctions-container'>
+        <h1>Soluções</h1>
+      <section className='solucoes'>
+          
 
-        <section className='solucoes'>
-          <div className='solucao-candidato'>
-            <img className='img-solucao-candidato' src={ImgSolucaoCandidato} alt="solucao-candidato" />
-            <h3>SOLUÇÃO INOVADORA PARA INICIANTES QUE ESTÃO BUSCANDO EMPREGO NA ÁREA DE PROGRAMAÇÃO</h3>
+          <div className='box-container-candidato'>
+              <img className='img-solucao-candidato' src={ImgSolucaoCandidato} alt="solucao-candidato" />
+              <span>O <strong style={{color: '#64D4CD'}}>TalentoAgora</strong> oferece uma solução inovadora para candidatos que querem arranjar empregos através da plataforma.</span>
           </div>
 
-          <div className='solucao-empresa'>
-              <img className='img-solucao-empresa' src={ImgSolucaoEmpresa} alt="solucao-empresa" />
-              <h3>EMPRESAS CONSEGUINDO FORMAR OS INICIANTES PARA SOLUCIONAR OS PROBLEMAS</h3>
+          <div className='box-container-empresa'>
+              <img className='img-solucao-empresa' src={ImgSolucaoEmpresa} alt="solucao-candidato" />
+              <span>Os candidatos serão a <strong style={{color: '#64D4CD'}}>solução</strong> para o quebra-cabeça que as empresas estão procurando no mercado de trabalho.</span>
           </div>
-
-        </section>
+      </section>
+        
 
       </main>
     </>

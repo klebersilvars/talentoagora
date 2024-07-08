@@ -1,5 +1,5 @@
 .header-container {
-    height: 500px;
+    height: 700px;
     width: 100%;
     background-color: #2EA49E;
     flex-direction: column;
@@ -72,6 +72,7 @@
 }
 
 @media (min-width: 768px) {
+
     .home-info {
         align-items: center;
         justify-content: initial;
@@ -111,7 +112,7 @@
 @media (min-width: 1440px) {
 
     .header-container {
-        height: 650px;
+        height: 550px;
     }
 
     .publicar-vaga-button {
@@ -129,7 +130,6 @@
         width: 70%;
     }
 }
-
 
 @keyframes float {
     0%, 100% {

@@ -2,6 +2,7 @@ import React from 'react'
 import './PublicarVaga.css'
 import HeaderPublicarVaga from '../../components/HeaderPublicarVaga/HeaderPublicarVaga'
 import FormContainerVagas from '../../MaterialComponent/FormContainerVagas/FormContainerVagas'
+import Footer from '../../components/Footer/Footer'
 
 const PublicarVaga = () => {
   return (
@@ -15,8 +16,8 @@ const PublicarVaga = () => {
         <section className='inputs-forms'>
           <FormContainerVagas/>
         </section>
+        
     </main>
-
     </>
   )
 }

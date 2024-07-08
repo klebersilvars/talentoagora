@@ -7,7 +7,7 @@ const HeaderPublicarVaga = () => {
   return (
     <>
 
-      <header className='header-container'>
+      <header className='header-container-publicar-vaga'>
         <Navbar />
 
         <section className='home-info'>

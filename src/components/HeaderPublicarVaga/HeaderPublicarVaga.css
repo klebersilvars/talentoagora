@@ -1,4 +1,4 @@
-.header-container {
+.header-container-publicar-vaga {
     height: 500px;
     width: 100%;
     background-color: #2EA49E;
@@ -77,6 +77,11 @@
 }
 
 @media (min-width: 768px) {
+
+    .header-container-publicar-vaga {
+         height: 350px;
+    }
+    
     .home-info {
         align-items: center;
         justify-content: center;

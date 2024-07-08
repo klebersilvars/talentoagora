@@ -1,5 +1,5 @@
 import React from 'react'
-import './PublicarVaga.css'
+import './PublicarVaga.css' 
 import HeaderPublicarVaga from '../../components/HeaderPublicarVaga/HeaderPublicarVaga'
 import FormContainerVagas from '../../MaterialComponent/FormContainerVagas/FormContainerVagas'
 import Footer from '../../components/Footer/Footer'

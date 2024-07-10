@@ -79,7 +79,7 @@ export default function FormContainerVagas() {
                     required
                     minRows={6}
                     placeholder="Descrição da vaga"
-                    style={{ width: '100%', padding: '10px', height: '10px', outline: 'none', border: '1px solid #c4c4c4;' }} // Ajuste o estilo conforme necessário
+                    style={{ width: '100%', padding: '10px', height: '10px', outline: 'none', border: '1px solid #c4c4c4;' }} 
                 />
                 </FormControl>
 

@@ -10,7 +10,7 @@ const HeaderPublicarVaga = () => {
       <header className='header-container-publicar-vaga'>
         <Navbar />
 
-        <section className='home-info'>
+        <section className='home-info-publicar-vaga'>
 
           <div className='texto-info-vaga'>
             <h2>TalentoAgora</h2>

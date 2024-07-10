@@ -7,10 +7,10 @@ const HeaderEmpresa = () => {
   return (
     <>
 
-      <header className='header-container'>
+      <header className='header-container-empresa'>
         <Navbar />
 
-        <section className='home-info'>
+        <section className='home-info-empresa '>
 
           <div className='texto-info-vaga'>
             <h2>TalentoAgora</h2>

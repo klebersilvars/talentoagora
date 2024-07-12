@@ -8,7 +8,7 @@ const HeaderPrincipal = () => {
 
   const navigate = useNavigate()
   function irPublicarVaga() {
-    navigate('/para-empresas')
+    navigate('/publicar-vaga')
   }
   return (
     <>

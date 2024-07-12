@@ -2,8 +2,16 @@ import React from 'react'
 import "./HeaderEmpresa.css"
 import Navbar from '../Navbar/Navbar'
 import ImgVaga from '../../assets/entrevista.png'
+import {useNavigate} from 'react-router-dom'
 
 const HeaderEmpresa = () => {
+
+  const navigation = useNavigate()
+
+  function irPublicarVaga() {
+    navigation('/publicar-vaga')
+  }
+  
   return (
     <>
 
@@ -17,7 +25,7 @@ const HeaderEmpresa = () => {
             <p className='paragrafo-empresa'>Não importa se a sua empresa é pequena ou grande, oferecemos na plataforma uma forma ideal para encontrar os melhores talentos.</p>
 
             <div className='btn-container-vagas'>
-              <button className='publicar-vaga-button'>Publicar uma vaga</button>
+              <button onClick={irPublicarVaga} className='publicar-vaga-button'>Publicar uma vaga</button>
             </div>
           </div>
 

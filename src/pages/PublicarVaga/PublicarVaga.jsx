@@ -18,6 +18,7 @@ const PublicarVaga = () => {
         </section>
         
     </main>
+    <Footer/>
     </>
   )
 }

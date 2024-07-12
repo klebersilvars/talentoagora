@@ -48,7 +48,7 @@ export default function FormContainerVagas() {
                 <FormControl style={{ gap: '0.9em' }} sx={{ m: 1, minWidth: 80 }}>
                     <InputLabel id="demo-simple-select-autowidth-label">Modo da vaga</InputLabel>
                     <Select
-                    required
+                        required
                         labelId="demo-simple-select-autowidth-label"
                         id="demo-simple-select-autowidth"
                         autoWidth
@@ -74,23 +74,24 @@ export default function FormContainerVagas() {
                             className='input-valor-salario'
                         />
                     </div>
+                    <span style={{fontWeight: 'bold'}}>Descrição da vaga</span>
                     <TextareaAutosize
-                    aria-label="minimum height"
-                    required
-                    minRows={6}
-                    placeholder="Descrição da vaga"
-                    style={{ width: '100%', padding: '10px', height: '10px', outline: 'none', border: '1px solid #c4c4c4;' }} 
-                />
+                        aria-label="minimum height"
+                        required
+                        minRows={6}
+                        placeholder="Descrição da vaga"
+                        style={{ width: '100%', padding: '10px', height: '10px', outline: 'none', border: '1px solid #c4c4c4;' }}
+                    />
                 </FormControl>
 
-                
-                
-
-                
-
-
+                <div className='button-container'>
+                    <button className='button-publicar-vaga'>Publicar vaga</button>
+                </div>
             </div>
 
+
+
         </Box>
+
     );
 }

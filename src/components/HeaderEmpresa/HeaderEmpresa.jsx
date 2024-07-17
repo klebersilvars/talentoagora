@@ -21,7 +21,7 @@ const HeaderEmpresa = () => {
         <section className='home-info-empresa '>
 
           <div className='texto-info-vaga'>
-            <h2>TalentoAgora</h2>
+            <h2>Para as empresas!</h2>
             <p className='paragrafo-empresa'>Não importa se a sua empresa é pequena ou grande, oferecemos na plataforma uma forma ideal para encontrar os melhores talentos.</p>
 
             <div className='btn-container-vagas'>

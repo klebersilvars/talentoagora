@@ -1,0 +1,21 @@
+.form-publicar-vaga {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-publicar-vaga > article > label {
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.sobre-a-empresa {
+    margin-top: 10px;
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+}

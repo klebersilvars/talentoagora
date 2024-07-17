@@ -3,9 +3,10 @@ import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Fade from '@mui/material/Fade';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function FadeMenu() {
+  const navigation = useNavigate()
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
@@ -13,6 +14,7 @@ export default function FadeMenu() {
   };
   const handleClose = () => {
     setAnchorEl(null);
+    navigation('/publicar-vaga')
   };
 
   return (

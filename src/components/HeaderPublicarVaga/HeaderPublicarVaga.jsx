@@ -13,7 +13,7 @@ const HeaderPublicarVaga = () => {
         <section className='home-info-publicar-vaga'>
 
           <div className='texto-info-vaga'>
-            <h2>TalentoAgora</h2>
+            <h2>Publicar vaga</h2>
             <p className='paragrafo-empresa'>Publique sua vaga de forma 100% gratuita em nossa plataforma :)</p>
           </div>
         </section>

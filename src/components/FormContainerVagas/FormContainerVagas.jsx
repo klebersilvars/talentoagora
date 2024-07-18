@@ -3,6 +3,7 @@ import './FormContainerVagas.css'
 import { Divider } from "antd";
 import { Input, Form } from "antd";
 import { Select } from "antd";
+import { Button, Flex } from 'antd';
 const { TextArea } = Input;
 import InputMask from 'react-input-mask';
 
@@ -92,8 +93,10 @@ const FormContainerVagas = () => {
                     />
 
                     <label>Até quando a vaga estará ativa?</label>
-                    <Input type="text" size="large" placeholder="XX/YY/ZZZZ" />
+                    <Input type="text" size="large" placeholder="YY/YY/YYYY" />
                 </article>
+
+                <Button className='publicar-vaga-button' type="primary">Publicar vaga</Button>
             </form>
         </>
     )

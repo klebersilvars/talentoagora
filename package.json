@@ -18,12 +18,14 @@
     "@mui/styled-engine-sc": "^6.0.0-alpha.18",
     "antd": "^5.19.2",
     "date-fns": "^3.6.0",
+    "firebase": "^10.12.4",
     "react": "^18.2.0",
     "react-currency-input-field": "^3.8.0",
     "react-dom": "^18.2.0",
     "react-input-mask": "^2.0.4",
     "react-number-format": "^5.4.0",
     "react-router-dom": "^6.23.1",
+    "react-toastify": "^10.0.5",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {

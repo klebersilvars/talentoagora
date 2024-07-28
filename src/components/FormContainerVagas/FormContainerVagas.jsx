@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import './FormContainerVagas.css'
-import { Input, Form, Select, Button, Modal, Divider } from "antd";
+import { Input,Select, Button, Modal, Divider } from "antd";
 const { TextArea } = Input;
 import { db } from '../../../firebase/FirebaseConfig'
-import { collection, addDoc, updateDoc, doc } from 'firebase/firestore';
+import { collection, doc, setDoc } from 'firebase/firestore';
 import { ToastContainer, toast } from 'react-toastify';
 import ModalPublicacaoVaga from '../../MaterialComponent/ModalPublicacaoVaga/ModalPublicacaoVaga';
 
@@ -11,7 +11,7 @@ import ModalPublicacaoVaga from '../../MaterialComponent/ModalPublicacaoVaga/Mod
 const FormContainerVagas = () => {
 
     //useStates dos formulários
-
+    const [isModalOpen, setIsModalOpenn] = useState(false)
     const [nomeEmpresa, setNomeEmpresa] = useState("");
     const [redeSocialEmpresa, setRedeSocialEmpresa] = useState("");
     const [emailEmpresa, setEmailEmpresa] = useState("");
@@ -23,10 +23,20 @@ const FormContainerVagas = () => {
     const [nivelVagas, setNivelVaga] = useState("")
 
     // função para enviar dados para o banco de dados
-    async function enviarVagaAnalise() {
+    function enviarVagaAnalise() {
+        setIsModalOpenn(true)
+    }
+
+    async function handleOk() {
         try {
-            // Primeiro, adicione o documento sem o ID
-            const docRef = await addDoc(collection(db, "vagas_analise"), {
+
+            // Gere um ID de documento antes de adicionar o documento
+            const docRef = doc(collection(db, "vagas_analise"));
+            const docId = docRef.id;
+
+            // Use esse ID ao criar o documento
+            await setDoc(docRef, {
+                id: docId,
                 nome_empresa: nomeEmpresa,
                 email_empresa: emailEmpresa,
                 rede_social_empresa: redeSocialEmpresa,
@@ -39,20 +49,30 @@ const FormContainerVagas = () => {
                 vaga_publicada: false,
             });
 
-            // Depois, atualize o documento com o ID gerado
-            await updateDoc(doc(db, "vagas_analise", docRef.id), {
-                id: docRef.id,
-            });
-
-            
+            toast.success("Vaga enviada para analíse")
+            setIsModalOpenn(false)
+            setNomeEmpresa("")
+            setEmailEmpresa("")
+            setDescricaoVaga("")
+            setModoVagaEmpresa("")
+            setNivelVaga("")
+            setSalarioVaga("")
+            setUrlVaga("")
+            setRedeSocialEmpresa("")
+            setTipoContrato("")
         } catch (error) {
-
+           toast.error("Erro! Tente novamente mais tarde")
         }
+    }
+
+    function handleCancel() {
+        setIsModalOpenn(false)
     }
 
     return (
         <>
-            {/* Colocar o modal de publicacao de vaga aqui e fazer a lógica para confirmção dele*/}
+            <ToastContainer />
+            <ModalPublicacaoVaga handleCancel={handleCancel} handleOk={handleOk} isModalOpen={isModalOpen} />
             <form className='form-publicar-vaga'>
                 <h1>Sobre a empresa</h1>
 

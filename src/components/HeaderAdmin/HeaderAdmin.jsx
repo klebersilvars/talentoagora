@@ -7,12 +7,10 @@ const HeaderAdmin = () => {
     return (
         <>
             <header className='header-admin-container'>
-                <div className='menu-nav-admin-mobile'>
+                <div className='menu-nav-admin'>
                     <h2 style={{color: 'white'}}>Administrador</h2>
                     <MenuNavAdmin/>
                 </div>
-
-                {/*Configurar header para desktopp */}
             </header>
         </>
     )

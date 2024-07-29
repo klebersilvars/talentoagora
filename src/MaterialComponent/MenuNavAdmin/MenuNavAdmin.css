@@ -1,0 +1,20 @@
+.menu-itens {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    gap: 1em;
+}
+
+.button-controle-vagas-analise, .button-relatorio {
+    width: 100%;
+    background-color: #2EA49E;
+    font-size: 17px;
+}
+
+.button-sair {
+    background-color: red;
+    width: 100%;
+    font-size: 17px;
+}

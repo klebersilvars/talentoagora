@@ -4,6 +4,7 @@ import Home from './src/pages/Home/Home'
 import Empresas from './src/pages/Empresas/Empresas'
 import PublicarVaga from './src/pages/PublicarVaga/PublicarVaga'
 import Admin from './src/pages/Admin/Admin'
+import LoginAdmin from './src/pages/LoginAdmin/LoginAdmin'
 
 const RoutesApp = () => {
   return (
@@ -14,7 +15,8 @@ const RoutesApp = () => {
             <Route path="/" element={<Home/>}/>
             <Route path="/para-empresas" element={<Empresas/>}/>
             <Route path="/publicar-vaga" element={<PublicarVaga/>}/>
-            <Route path="/admin/login" element={<Admin/>}/>
+            <Route path="/login/administrador" element={<LoginAdmin/>}/>
+            <Route path="/admin/:id" element={<Admin/>}/>
         </Routes>
 
     </BrowserRouter>

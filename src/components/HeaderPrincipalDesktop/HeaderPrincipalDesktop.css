@@ -1,0 +1,36 @@
+.header-container-principal-desktop {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    background-image: url('../../assets/wave-haikei.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.header-container-principal-desktop > div {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.navegacao-container-desktop {
+    gap: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.link-para-empresas {
+    color: white;
+    text-decoration: none;
+}
+
+.link-para-empresas:hover {
+    text-decoration: underline;
+}

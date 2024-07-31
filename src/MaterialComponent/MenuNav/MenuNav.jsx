@@ -35,7 +35,7 @@ export default function FadeMenu() {
           'aria-labelledby': 'fade-button',
         }}
         anchorEl={anchorEl}
-        open={open}s
+        open={open}
         onClose={handleClose}
         TransitionComponent={Fade}
       >

@@ -15,7 +15,7 @@ const RoutesApp = () => {
             <Route path="/" element={<Home/>}/>
             <Route path="/para-empresas" element={<Empresas/>}/>
             <Route path="/publicar-vaga" element={<PublicarVaga/>}/>
-            <Route path="/login/administrador" element={<LoginAdmin/>}/>
+            <Route path="/login/admin" element={<LoginAdmin/>}/>
             <Route path="/admin/:id" element={<Admin/>}/>
         </Routes>
 

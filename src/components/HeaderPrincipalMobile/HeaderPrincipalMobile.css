@@ -1,0 +1,19 @@
+.header-container-principal-mobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: auto;
+    flex-direction: column;
+    justify-content: space-between;
+    background-image: url('../../assets/wave-haikei-mobile.png');
+    height: 500px;
+}
+
+.navegacao-container-mobile {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #2EA49E;
+    justify-content: space-between;
+    padding: 10px;
+}

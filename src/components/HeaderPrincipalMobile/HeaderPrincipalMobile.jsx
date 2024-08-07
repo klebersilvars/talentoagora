@@ -1,7 +1,8 @@
 import React from 'react'
 import './HeaderPrincipalMobile.css'
-import BackgroundWaveComponentMobile from '../BackgroundWaveComponentMobile/BackgroundWaveComponentMobile'
 import MenuNav from '../../MaterialComponent/MenuNav/MenuNav'
+import Typewriter from 'typewriter-effect';
+
 
 const HeaderPrincipalMobile = () => {
     return (
@@ -10,7 +11,16 @@ const HeaderPrincipalMobile = () => {
                 <h1 style={{ color: 'white' }}>TalentoAgora</h1>
                 <MenuNav />
             </nav>
-            {/*<BackgroundWaveComponentMobile />*/}
+            <h1>TalentoAgora</h1>
+            <Typewriter
+                options={{
+                    strings: ['Aqui você encontra a vaga dos sonhos.', 'Vagas para estágio/júnior.'],
+                    autoStart: true,
+                    loop: true,
+                    delay: 60,
+                    wrapperClassName: 'string-animada'
+                }}
+            />
         </header>
     )
 }

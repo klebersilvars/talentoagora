@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import './FormContainerVagas.css'
-import { Input,Select, Button, Modal, Divider } from "antd";
+import { Input, Select, Button, Modal, Divider } from "antd";
 const { TextArea } = Input;
 import { db } from '../../../firebase/FirebaseConfig'
 import { collection, doc, setDoc } from 'firebase/firestore';
@@ -30,38 +30,43 @@ const FormContainerVagas = () => {
     async function handleOk() {
         try {
 
-            // Gere um ID de documento antes de adicionar o documento
-            const docRef = doc(collection(db, "vagas_analise"));
-            const docId = docRef.id;
+            if (!nomeEmpresa == '' && !emailEmpresa == '' && !redeSocialEmpresa == '' && !descricaoVaga == '' && !modoVagaEmpresa == '' && !salarioVaga == '' && !tipoContrato == '' && !urlVaga == '') {
+                // Gere um ID de documento antes de adicionar o documento
+                const docRef = doc(collection(db, "vagas_analise"));
+                const docId = docRef.id;
 
-            // Use esse ID ao criar o documento
-            await setDoc(docRef, {
-                id: docId,
-                nome_empresa: nomeEmpresa,
-                email_empresa: emailEmpresa,
-                rede_social_empresa: redeSocialEmpresa,
-                descricao_vaga: descricaoVaga,
-                modo_vaga: modoVagaEmpresa,
-                nivel_vaga: nivelVagas,
-                salario_vaga: salarioVaga,
-                tipo_contrato: tipoContrato,
-                url_vaga: urlVaga,
-                vaga_publicada: false,
-            });
+                // Use esse ID ao criar o documento
+                await setDoc(docRef, {
+                    id: docId,
+                    nome_empresa: nomeEmpresa,
+                    email_empresa: emailEmpresa,
+                    rede_social_empresa: redeSocialEmpresa,
+                    descricao_vaga: descricaoVaga,
+                    modo_vaga: modoVagaEmpresa,
+                    nivel_vaga: nivelVagas,
+                    salario_vaga: salarioVaga,
+                    tipo_contrato: tipoContrato,
+                    url_vaga: urlVaga,
+                    vaga_publicada: false,
+                });
 
-            toast.success("Vaga enviada para analíse")
-            setIsModalOpenn(false)
-            setNomeEmpresa("")
-            setEmailEmpresa("")
-            setDescricaoVaga("")
-            setModoVagaEmpresa("")
-            setNivelVaga("")
-            setSalarioVaga("")
-            setUrlVaga("")
-            setRedeSocialEmpresa("")
-            setTipoContrato("")
+                toast.success("Vaga enviada para analíse")
+                setIsModalOpenn(false)
+                setNomeEmpresa("")
+                setEmailEmpresa("")
+                setDescricaoVaga("")
+                setModoVagaEmpresa("")
+                setNivelVaga("")
+                setSalarioVaga("")
+                setUrlVaga("")
+                setRedeSocialEmpresa("")
+                setTipoContrato("")
+            }else {
+                toast.error('Preencha todos os campos corretamente!')
+            }
         } catch (error) {
-           toast.error("Erro! Tente novamente mais tarde")
+            toast.error("Erro! Tente novamente mais tarde")
+            console.error(error)
         }
     }
 
@@ -71,7 +76,7 @@ const FormContainerVagas = () => {
 
     return (
         <>
-            <ToastContainer />
+            
             <ModalPublicacaoVaga handleCancel={handleCancel} handleOk={handleOk} isModalOpen={isModalOpen} />
             <form className='form-publicar-vaga'>
                 <h1>Sobre a empresa</h1>
@@ -178,6 +183,8 @@ const FormContainerVagas = () => {
                 </article>
 
                 <Button onClick={enviarVagaAnalise} className='publicar-vaga-button' type="primary">Publicar vaga</Button>
+
+                <ToastContainer />
             </form>
         </>
     )

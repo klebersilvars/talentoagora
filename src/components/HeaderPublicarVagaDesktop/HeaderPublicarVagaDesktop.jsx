@@ -1,11 +1,11 @@
 import React from 'react'
-import './HeaderPrincipalDesktop.css';
+import './HeaderPublicarVagaDesktop.css';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 import Typewriter from 'typewriter-effect';
 import {useNavigate} from 'react-router-dom'
 
-const HeaderPrincipalDesktop = () => {
+const HeaderPublicarVagaDesktop = () => {
 
     const navigate = useNavigate()
     function irPublicarVaga() {
@@ -14,10 +14,10 @@ const HeaderPrincipalDesktop = () => {
     return (
         <>
 
-            <header className='header-container-principal-desktop'>
+            <header className='header-container-principal-desktop-publicar-vaga'>
                 <div>
                     <h1 style={{ color: 'white' }}>TalentoAgora</h1>
-                    <nav className='navegacao-container-desktop'>
+                    <nav className='navegacao-container-desktop-publicar-vaga'>
                         <Button onClick={irPublicarVaga} type='primary'>Publicar Vaga</Button>
                     </nav>
                 </div>
@@ -29,7 +29,7 @@ const HeaderPrincipalDesktop = () => {
                         autoStart: true,
                         loop: true,
                         delay: 60,
-                        wrapperClassName: 'string-animada-desktop',
+                        wrapperClassName: 'string-animada-desktop-publicar-vaga',
                         cursor: ''
                     }}
                 />
@@ -38,4 +38,4 @@ const HeaderPrincipalDesktop = () => {
     )
 }
 
-export default HeaderPrincipalDesktop
+export default HeaderPublicarVagaDesktop

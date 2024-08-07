@@ -14,7 +14,7 @@ export default function FadeMenu() {
   };
   const handleClose = () => {
     setAnchorEl(null);
-    navigation('/publicar-vaga')
+    
   };
 
   return (
@@ -39,10 +39,7 @@ export default function FadeMenu() {
         onClose={handleClose}
         TransitionComponent={Fade}
       >
-        <MenuItem onClick={handleClose}>
-          <Link style={{ textDecoration: 'none', color: 'black' }} to="/para-empresas">Para empresas</Link>
-        </MenuItem>
-        <MenuItem onClick={handleClose}>Vagas</MenuItem>
+        <MenuItem onClick={handleClose}>Publicar Vaga</MenuItem>
       </Menu>
     </div>
   );

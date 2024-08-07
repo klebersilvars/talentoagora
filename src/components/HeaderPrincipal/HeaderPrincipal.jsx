@@ -6,15 +6,15 @@ import HeaderPrincipalMobile from '../HeaderPrincipalMobile/HeaderPrincipalMobil
 const HeaderPrincipal = () => {
   return (
     <>
-      
-    <header className='header-desktop'>
-      <HeaderPrincipalDesktop/>
-    </header>
 
-    <header className='header-mobile'>
-      <HeaderPrincipalMobile/>
-    </header>
-        
+      <header className='header-desktop'>
+        <HeaderPrincipalDesktop />
+      </header>
+
+      <header className='header-mobile'>
+        <HeaderPrincipalMobile />
+      </header>
+
     </>
   )
 }

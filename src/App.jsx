@@ -8,7 +8,6 @@ import RoutesApp from '../Routes';
 const App = () => {
   return (
     <>
-    
     <RoutesApp/>
     
     </>

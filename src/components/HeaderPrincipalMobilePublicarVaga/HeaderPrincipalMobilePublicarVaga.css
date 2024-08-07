@@ -1,4 +1,4 @@
-.header-container-principal-mobile {
+.header-container-principal-mobile-publicar-vaga {
     width: 100%;
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@
     position: relative;
 }
 
-.navegacao-container-mobile {
+.navegacao-container-mobile-publicar-vaga {
     width: 100%;
     display: flex;
     align-items: center;
@@ -19,14 +19,14 @@
     padding: 10px;
 }
 
-.header-container-principal-mobile >h1  {
+.header-container-principal-mobile-publicar-vaga >h1  {
     position: absolute;
     top: 30%;
     color: white;
     text-align: center;
 }
 
-.string-animada {
+.string-animada-publicar-vaga {
     position: absolute;
     top: 45%;
     width: 60%;
@@ -37,7 +37,7 @@
 }
 
 @media (min-width: 768px) {
-    .string-animada {
+    .string-animada-publicar-vaga {
         display: none;
     }
 }

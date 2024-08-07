@@ -1,15 +1,14 @@
 import React from 'react'
 import './PublicarVaga.css'
-import HeaderPublicarVaga from '../../components/HeaderPublicarVaga/HeaderPublicarVaga'
 import FormContainerVagas from '../../components/FormContainerVagas/FormContainerVagas'
 import Footer from '../../components/Footer/Footer'
+import HeaderPrincipal from '../../components/HeaderPrincipal/HeaderPrincipal'
 
 const PublicarVaga = () => {
   return (
     <>
 
-      <HeaderPublicarVaga />
-
+      <HeaderPrincipal/>
       <main className='form-container'>
         <h2>Preencha sua vaga aqui na plataforma e receba as candidaturas!</h2>
 

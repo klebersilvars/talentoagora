@@ -8,7 +8,7 @@ const HeaderAdmin = () => {
         <>
             <header className='header-admin-container'>
                 <div className='menu-nav-admin'>
-                    <h2 style={{color: 'white'}}>Administrador</h2>
+                    <h2 style={{color: 'white'}}>Administrador talentoAgora</h2>
                     <MenuNavAdmin/>
                 </div>
             </header>

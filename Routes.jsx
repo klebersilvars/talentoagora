@@ -4,6 +4,7 @@ import Home from './src/pages/Home/Home'
 import PublicarVaga from './src/pages/PublicarVaga/PublicarVaga'
 import Admin from './src/pages/Admin/Admin'
 import LoginAdmin from './src/pages/LoginAdmin/LoginAdmin'
+import Private from './Private'
 
 const RoutesApp = () => {
   return (
@@ -13,8 +14,8 @@ const RoutesApp = () => {
         <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/publicar-vaga" element={<PublicarVaga/>}/>
-            <Route path="/login/admin" element={<LoginAdmin/>}/>
-            <Route path="/admin/:id" element={<Admin/>}/>
+            <Route path="/login/admin" element={<Private><LoginAdmin/></Private>}/>
+            <Route path="/admin/:id" element={<Private><Admin/></Private>}/>
         </Routes>
 
     </BrowserRouter>

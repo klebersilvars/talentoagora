@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import {
   MenuFoldOutlined
 } from '@ant-design/icons';
-const App = () => {
+const App = ({abrirModalAnalista, openModalAnaliseVagas}) => {
   const [open, setOpen] = useState(false);
   const showDrawer = () => {
     setOpen(true);
@@ -16,6 +16,7 @@ const App = () => {
     setOpen(false);
   };
 
+  
   const navigate = useNavigate()
 
   async function sairAdmin() {
@@ -36,7 +37,9 @@ const App = () => {
       </Button>
       <Drawer className="drawer-container-menu" title="Administração Menu" onClose={onClose} open={open}>
         <div className='menu-itens'>
-          <Button type='primary' className='button-controle-vagas-analise'> Vagas para análise</Button>
+          <Button onClick={()=> {
+            abrirModalAnalista(), setOpen(false)
+          }} type='primary' className='button-controle-vagas-analise'> Vagas para análise</Button>
           <Button type='primary' className='button-relatorio'>Relatórios</Button>
           <Button onClick={sairAdmin} type='primary' className='button-sair'>Sair</Button>
         </div>

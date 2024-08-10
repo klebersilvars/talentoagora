@@ -3,13 +3,13 @@ import './HeaderAdmin.css'
 import MenuNavAdmin from '../../MaterialComponent/MenuNavAdmin/MenuNavAdmin'
 
 
-const HeaderAdmin = () => {
+const HeaderAdmin = ({abrirModalAnalista}) => {
     return (
         <>
             <header className='header-admin-container'>
                 <div className='menu-nav-admin'>
-                    <h2 style={{color: 'white'}}>Administrador talentoAgora</h2>
-                    <MenuNavAdmin/>
+                    <h2 style={{color: 'white', fontSize: '22px'}}>Dashboard Admin</h2>
+                    <MenuNavAdmin abrirModalAnalista={abrirModalAnalista}/>
                 </div>
             </header>
         </>

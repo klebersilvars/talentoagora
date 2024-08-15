@@ -22,7 +22,7 @@ const App = ({abrirModalAnalista, openModalAnaliseVagas}) => {
   async function sairAdmin() {
     try {
       await signOut(auth)
-      navigate('/login/admin');
+      navigate('/logar/adm');
       alert('Usuário deslogado');
       localStorage.removeItem('@dadosAdmin');
       localStorage.removeItem('@rotaPrivadaAdmin');

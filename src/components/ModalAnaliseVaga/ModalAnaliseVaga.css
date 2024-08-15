@@ -1,7 +1,111 @@
 .modalAnaliseVagas {
-    height: 500px;
+    height: 100vh;
     top: 20px;
     display: flex;
     flex-direction: column;
     gap: 1em;
+
 }
+
+.section-vagas-analise {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2em;
+    overflow-y: scroll;
+}
+
+.box-card-analise {
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.205);
+}
+
+.info-card-analise {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4em;
+}
+
+
+/* display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); 
+        gap: 20px; /* Espaçamento entre os itens 
+        padding: 10px;
+*/
+
+@media (min-width: 768px) {
+    .section-vagas-analise {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
+        padding: 10px;
+        place-items: center;
+    }
+
+    .box-card-analise {
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.205);
+
+    }
+
+    .info-card-analise {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+    }
+
+}@media (min-width: 768px) {
+    .section-vagas-analise {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+        padding: 10px;
+        place-items: center;
+    }
+
+    .box-card-analise {
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.205);
+
+    }
+
+    .info-card-analise {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .section-vagas-analise {
+        height: 100%;
+        width: 100%;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        gap: 20px;
+        padding: 10px;
+        place-items: center;
+    }
+
+    .box-card-analise {
+        box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.205);
+
+    }
+
+    .info-card-analise {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4em;
+    }
+
+}
+
+

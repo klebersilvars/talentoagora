@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Modal } from 'antd';
+import { Button, Card, Modal } from 'antd';
 import './ModalAnaliseVaga.css'
 import { db } from '../../../firebase/FirebaseConfig';
 import { getDocs, collection, getDoc, doc } from 'firebase/firestore'
+
 
 
 const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
@@ -34,7 +35,7 @@ const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
             setVagasAnalise(lista)
           })
         })
-        .catch((error)=> {
+        .catch((error) => {
           console.error(error)
         })
     }
@@ -48,13 +49,37 @@ const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
         centered
         open={openModalAnaliseVagas}
         onCancel={fecharModalAnalista}
+        onOk={fecharModalAnalista}
+        cancelText='Fechar'
         width={1000}
         className='modalAnaliseVagas'
-        bodyStyle={{ height: 'auto', overflowY: 'auto' }}
+        bodyStyle={{ height: 'auto', overflowY: 'auto', width: '100%' }}
 
       >
-        <p>some contents...</p>
 
+        <section className='section-vagas-analise'>
+          {vagasAnalise.map((item) => {
+            return (
+              <Card
+                key={item.id}
+                title={item.nomeEmpresa}
+                extra={<Button type='primary'>Ver Detalhes</Button>}
+                style={{
+                  width: 300,
+                }}
+                className='box-card-analise'
+              >
+
+                <div className='info-card-analise'>
+                  <span>Status:{item.vagaPublicada == false ? 'VagaPublica' : 'Vaga Publicada'}</span>
+                  <span>Descrição: {item.descricaoVaga}</span>
+                </div>
+
+
+              </Card>
+            )
+          })}
+        </section>
 
       </Modal>
     </>

@@ -3,7 +3,8 @@ import './HeaderPrincipalDesktop.css';
 import { Link } from 'react-router-dom';
 import { Button } from 'antd';
 import Typewriter from 'typewriter-effect';
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import EntrevistaImg from '../../assets/entrevista.png'
 
 const HeaderPrincipalDesktop = () => {
 
@@ -22,17 +23,14 @@ const HeaderPrincipalDesktop = () => {
                     </nav>
                 </div>
 
-                <h1>TalentoAgora</h1>
-                <Typewriter
-                    options={{
-                        strings: ['Aqui você encontra a vaga dos sonhos.', 'Vagas para estágio/júnior.'],
-                        autoStart: true,
-                        loop: true,
-                        delay: 60,
-                        wrapperClassName: 'string-animada-desktop',
-                        cursor: ''
-                    }}
-                />
+                <article className='article-container-header-principal-desktop'>
+                    <div>
+                        <h1>TalentoAgora</h1>
+                        <p>Aqui você encontra a vaga dos sonhos</p>
+                    </div>
+
+                    <img src={EntrevistaImg} alt="img-entrevista" className='img-entrevista' />
+                </article>
             </header>
         </>
     )

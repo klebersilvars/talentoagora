@@ -5,6 +5,8 @@ const { TextArea } = Input;
 import { db } from '../../../firebase/FirebaseConfig'
 import { collection, doc, setDoc } from 'firebase/firestore';
 import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
+
 import ModalPublicacaoVaga from '../../MaterialComponent/ModalPublicacaoVaga/ModalPublicacaoVaga';
 
 

@@ -53,7 +53,7 @@ const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
         cancelText='Fechar'
         width={1000}
         className='modalAnaliseVagas'
-        bodyStyle={{ height: 'auto', overflowY: 'auto', width: '100%' }}
+        style={{ height: 'auto', overflowY: 'auto', width: '100%' }}  // Usando 'style' em vez de 'bodyStyle'
 
       >
 

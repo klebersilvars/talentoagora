@@ -3,12 +3,17 @@ import { Button, Card, Modal } from 'antd';
 import './ModalAnaliseVaga.css'
 import { db } from '../../../firebase/FirebaseConfig';
 import { getDocs, collection, getDoc, doc } from 'firebase/firestore'
+import ModalDetalhesVagas from '../../MaterialComponent/ModalDetalhesVagas/ModalDetalhesVagas';
 
 
 
 const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
 
   const [vagasAnalise, setVagasAnalise] = useState([]);
+  const [modalDetalheOpen, setModalDetalheOpen] = useState(false);
+  const [vagaSelecionada, setVagaSelecionada] = useState(null);
+
+  //terminar a abertura do modal passando os detalhes de cada vaga publicada.
 
   useEffect(() => {
     async function buscarVagas() {
@@ -41,6 +46,12 @@ const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
     }
     buscarVagas()
   }, [])
+
+  function verVagaDetalhada(item) {
+    setModalDetalheOpen(true)
+    setVagaSelecionada(item);
+  }
+
   return (
     <>
 
@@ -53,7 +64,7 @@ const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
         cancelText='Fechar'
         width={1000}
         className='modalAnaliseVagas'
-        style={{ height: 'auto', overflowY: 'auto', width: '100%' }}  // Usando 'style' em vez de 'bodyStyle'
+        style={{ height: 'auto', overflowY: 'auto', width: '100%' }} 
 
       >
 
@@ -63,7 +74,9 @@ const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
               <Card
                 key={item.id}
                 title={item.nomeEmpresa}
-                extra={<Button type='primary'>Ver Detalhes</Button>}
+                extra={<Button onClick={()=> {
+                    verVagaDetalhada(item)
+                }} type='primary'>Ver Detalhes</Button>}
                 style={{
                   width: 300,
                 }}
@@ -71,10 +84,12 @@ const ModalAnaliseVaga = ({ openModalAnaliseVagas, fecharModalAnalista }) => {
               >
 
                 <div className='info-card-analise'>
-                  <span>Status:{item.vagaPublicada == false ? 'VagaPublica' : 'Vaga Publicada'}</span>
+                  <span>{item.vagaPublicada == false ? <p style={{color: 'red'}}>Vaga não publicada</p> : <p style={{color: 'green'}}>Vaga publicada</p>}</span>
                   <span>Descrição: {item.descricaoVaga}</span>
                 </div>
-
+                
+                <ModalDetalhesVagas vaga={vagaSelecionada} onCancel={()=> {setModalDetalheOpen(false)}} open={modalDetalheOpen}/>
+                
 
               </Card>
             )

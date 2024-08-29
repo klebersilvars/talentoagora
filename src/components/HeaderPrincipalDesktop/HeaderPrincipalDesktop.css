@@ -48,6 +48,12 @@
     position: relative;
 }
 
+.article-container-header-principal-desktop > div {
+    position: absolute;
+    top: 100px;
+    left: 30%;
+}
+
 .article-container-header-principal-desktop>div>h1 {
     color: white;
     font-size: 64px;
@@ -61,7 +67,7 @@
 
 .img-entrevista {
     position: absolute;
-    top: 0;
+    top: -50px;
     left: 65%;
     filter: drop-shadow(5px 5px 5px rgba(0, 0, 0, 0.281));
     height: auto;
